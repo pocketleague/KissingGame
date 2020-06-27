@@ -89,13 +89,24 @@ public class LevelManager : MonoBehaviour
         bar.SetActive(true);
     }
 
+    public void TouchDown()
+    {
+        startKissing = true;
+        
+    }
+
+    public void TouchUp()
+    {
+        startKissing = false;
+
+    }
+
     void Update()
     {
         if (!LEVEL_COMPLETE && SingletonClass.instance.CURRENT_LEVEL != null)
         {
-            if (Input.GetButton("Jump"))
+            if (startKissing)
             {
-                startKissing = true;
                 filler.fillAmount += .1f * Time.deltaTime;
 
                 if (filler.fillAmount >= 1)
@@ -106,10 +117,23 @@ public class LevelManager : MonoBehaviour
                     OnLevelComplete();
                 }
             }
-            else
-            {
-                startKissing = false;
-            }
+            //if (Input.GetButton("Jump"))
+            //{
+            //    startKissing = true;
+            //    filler.fillAmount += .1f * Time.deltaTime;
+
+            //    if (filler.fillAmount >= 1)
+            //    {
+            //        LEVEL_COMPLETE = true;
+            //        Debug.Log("Level complete");
+
+            //        OnLevelComplete();
+            //    }
+            //}
+            //else
+            //{
+            //    startKissing = false;
+            //}
 
             if (startKissing)
             {
