@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public bool lookAtCouple, lookAway;
     public float originalAngle, lookAngle;
     public Animator animator;
-
+    public GameObject mainModel, duplicateModel;
     void Start()
     {
         //  Invoke("LookAt", 4);
@@ -62,9 +62,15 @@ public class Enemy : MonoBehaviour
 
     void LookAway()
     {
-        animator.SetInteger("enemy", 2);
-
-        Invoke("LookAt", Random.Range(1, 5));
+        if (SingletonClass.instance.IS_KISSING)
+        {
+            CatchCouple();
+        }
+        else
+        {
+            animator.SetInteger("enemy", 2);
+            Invoke("LookAt", Random.Range(1, 5));
+        }
     }
 
     void ChangeBooleans()
@@ -97,8 +103,13 @@ public class Enemy : MonoBehaviour
     {
         int rand = Random.Range(1, 3);
         animator.SetInteger("enemy", rand);
+    }
 
-
-
+    public void CatchCouple()
+    {
+        duplicateModel.SetActive(true);
+        mainModel.SetActive(false);
+        LevelManager levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        levelManager.OnLevelFailed();
     }
 }

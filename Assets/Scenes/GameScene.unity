@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657922, g: 0.49641418, b: 0.57481664, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CURRENT_LEVEL: {fileID: 0}
   LEVEL_NO: 0
+  IS_KISSING: 0
 --- !u!1 &107633488
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +704,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.371
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -739,7 +740,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.03125, y: 0, z: 0, w: 5.5e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -750,13 +751,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.36225453, y: -0.46678296, z: 0.21766445, w: 0.7768574}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -62, z: 0}
 --- !u!1 &870837107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1020,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.13043964, y: 0, z: 0, w: 0.9914563}
-  m_LocalPosition: {x: -5.8, y: -24, z: 54.3}
+  m_LocalPosition: {x: -4.5, y: -13.6, z: 57.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1115,7 +1116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0.8039216}
+  m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 0.14509805}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1248,12 +1249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967286ceab014402eb6187b94aca9bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startKissing: 0
   startedKiss: 0
   filler: {fileID: 417791642}
   LEVEL_COMPLETE: 0
   levels:
-  - {fileID: 7292634059065347944, guid: 681f898c860f743e799a8b6aa8fa72c8, type: 3}
+  - {fileID: 2057932322678494788, guid: 8677e4ef4ea9c4298a078cd3d9317773, type: 3}
   - {fileID: 7292634059065347944, guid: 681f898c860f743e799a8b6aa8fa72c8, type: 3}
   fadeIn: {fileID: 942461246}
   bar: {fileID: 870837107}

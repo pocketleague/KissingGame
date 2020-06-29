@@ -7,7 +7,7 @@ public class SingletonClass : MonoBehaviour
     public static SingletonClass instance = null;
     public GameObject CURRENT_LEVEL;
     public int LEVEL_NO;
-
+    public bool IS_KISSING;
 
 
     void Awake()

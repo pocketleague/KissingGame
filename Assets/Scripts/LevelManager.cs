@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-
-    public bool startKissing, startedKiss;
+    public bool startedKiss;
 
     public Image filler;
 
@@ -91,21 +90,19 @@ public class LevelManager : MonoBehaviour
 
     public void TouchDown()
     {
-        startKissing = true;
-        
+        SingletonClass.instance.IS_KISSING = true;
     }
 
     public void TouchUp()
     {
-        startKissing = false;
-
+        SingletonClass.instance.IS_KISSING = false;
     }
 
     void Update()
     {
         if (!LEVEL_COMPLETE && SingletonClass.instance.CURRENT_LEVEL != null)
         {
-            if (startKissing)
+            if (SingletonClass.instance.IS_KISSING)
             {
                 filler.fillAmount += .1f * Time.deltaTime;
 
@@ -119,7 +116,7 @@ public class LevelManager : MonoBehaviour
             }
             //if (Input.GetButton("Jump"))
             //{
-            //    startKissing = true;
+            //    SingletonClass.instance.IS_KISSING = true;
             //    filler.fillAmount += .1f * Time.deltaTime;
 
             //    if (filler.fillAmount >= 1)
@@ -132,10 +129,10 @@ public class LevelManager : MonoBehaviour
             //}
             //else
             //{
-            //    startKissing = false;
+            //    SingletonClass.instance.IS_KISSING = false;
             //}
 
-            if (startKissing)
+            if (SingletonClass.instance.IS_KISSING)
             {
                 if (!startedKiss)
                 {
@@ -185,20 +182,26 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.SetActive(false);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.SetActive(false);
 
+        gameOverPanel.SetActive(true);
+    }
 
 
-        //for (int i = 0; i < 4; i++)
-        //{
-        //    SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[i].SetActive(false);
-        //}
-        //SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[0].SetActive(true);
+    public void OnLevelFailed()
+    {
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.SetActive(true);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.SetActive(true);
+
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
+
+
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.SetActive(false);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.SetActive(false);
 
         gameOverPanel.SetActive(true);
     }
 
 
-
-    
 
     public void Right()
     {
