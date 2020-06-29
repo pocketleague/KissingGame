@@ -175,6 +175,24 @@ public class LevelManager : MonoBehaviour
 
     public void OnLevelComplete()
     {
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.SetActive(true);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.SetActive(true);
+
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
+
+
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.SetActive(false);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.SetActive(false);
+
+
+
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[i].SetActive(false);
+        //}
+        //SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[0].SetActive(true);
+
         gameOverPanel.SetActive(true);
     }
 
