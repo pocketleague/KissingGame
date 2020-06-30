@@ -25,6 +25,8 @@ public class LevelManager : MonoBehaviour
 
      private void Awake()
     {
+
+        Application.targetFrameRate = 60;
         ButtonListener.YesButtonPressed += Right;
         ButtonListener.NoButtonPressed += Left;
         ButtonListener.SendMessageButtonPressed += CloseSwipePanel;
