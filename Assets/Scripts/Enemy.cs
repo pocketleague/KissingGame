@@ -107,8 +107,17 @@ public class Enemy : MonoBehaviour
 
     public void CatchCouple()
     {
-        duplicateModel.SetActive(true);
-        mainModel.SetActive(false);
+        if (SingletonClass.instance.LEVEL_NO == 1)
+        {
+            animator.SetBool("yelling", true);
+        }
+        else
+        {
+            duplicateModel.SetActive(true);
+            mainModel.SetActive(false);
+        }
+
+        
         LevelManager levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         levelManager.OnLevelFailed();
     }

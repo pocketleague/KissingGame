@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
 {
     public bool startedKiss;
 
-    public Image filler;
+ //   public Image filler;
 
     public bool LEVEL_COMPLETE;
 
@@ -66,7 +66,7 @@ public class LevelManager : MonoBehaviour
         if (matchPanel)
             Destroy(matchPanel);
 
-        filler.fillAmount = 0;
+      //  SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.fillAmount = 0;
         LEVEL_COMPLETE = false;
         gameOverPanel.SetActive(false);
 
@@ -106,9 +106,9 @@ public class LevelManager : MonoBehaviour
         {
             if (SingletonClass.instance.IS_KISSING)
             {
-                filler.fillAmount += .1f * Time.deltaTime;
+                SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.fillAmount += .1f * Time.deltaTime;
 
-                if (filler.fillAmount >= 1)
+                if (SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.fillAmount >= 1)
                 {
                     LEVEL_COMPLETE = true;
                     Debug.Log("Level complete");
@@ -119,9 +119,9 @@ public class LevelManager : MonoBehaviour
             //if (Input.GetButton("Jump"))
             //{
             //    SingletonClass.instance.IS_KISSING = true;
-            //    filler.fillAmount += .1f * Time.deltaTime;
+            //    SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.fillAmount += .1f * Time.deltaTime;
 
-            //    if (filler.fillAmount >= 1)
+            //    if (SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.fillAmount >= 1)
             //    {
             //        LEVEL_COMPLETE = true;
             //        Debug.Log("Level complete");
@@ -190,6 +190,9 @@ public class LevelManager : MonoBehaviour
 
     public void OnLevelFailed()
     {
+
+        LEVEL_COMPLETE = false;
+
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.SetActive(true);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.SetActive(true);
 
@@ -200,10 +203,16 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.SetActive(false);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.SetActive(false);
 
+        Invoke("HearAnimDelay", 2);
+        
         gameOverPanel.SetActive(true);
     }
 
-
+    void HearAnimDelay()
+    {
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.GetComponent<Animator>().SetBool("break", true);
+        Destroy(SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.gameObject, 2);
+    }
 
     public void Right()
     {
