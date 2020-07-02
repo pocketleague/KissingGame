@@ -107,7 +107,7 @@ public class Enemy : MonoBehaviour
 
     public void CatchCouple()
     {
-        if (SingletonClass.instance.LEVEL_NO == 1)
+        if (SingletonClass.instance.LEVEL_NO == 2)
         {
             animator.SetBool("yelling", true);
         }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LevelData : MonoBehaviour
 {
-    public GameObject boy, girl, enemy, particleEffect, boyHappy, girlHappy;
+    public GameObject boy, girl, enemy, particleEffect, boyHappy, girlHappy, confetti;
     public GameObject [] cameras;
     public Image heartFiller;
 }

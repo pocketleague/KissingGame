@@ -174,6 +174,9 @@ public class LevelManager : MonoBehaviour
 
     public void OnLevelComplete()
     {
+        Debug.Log("gggg level complete");
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti.SetActive(true);
+
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.SetActive(true);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.SetActive(true);
 
@@ -238,6 +241,21 @@ public class LevelManager : MonoBehaviour
     {
         if(camIndex == 3){
             camIndex = 0;
+        }
+
+        if (camIndex == 0)
+        {
+            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.GetComponent<Animator>().SetBool("headTurn", true);
+        }else if (camIndex == 1)
+        {
+            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.GetComponent<Animator>().SetBool("headTurn", true);
+        }
+        else if (camIndex == 2)
+        {
+            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.GetComponent<Animator>().SetBool("headTurn", false);
+            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.GetComponent<Animator>().SetBool("headTurn", false);
+
+            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.parent.gameObject.SetActive(true);
         }
 
         camIndex++;

@@ -26,9 +26,6 @@ public class ButtonListener : MonoBehaviour
         {
             GetComponent<Button>().onClick.AddListener(() => StartCoroutine(nameof(SendMessage)));
         }
-
-
-        
     }
 
     private IEnumerator No()
