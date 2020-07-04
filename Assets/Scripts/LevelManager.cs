@@ -188,8 +188,24 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.SetActive(false);
 
         gameOverPanel.SetActive(true);
+
+        StartCoroutine(ConfettiDelay());
     }
 
+    IEnumerator ConfettiDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti_blast1.SetActive(true);
+
+        yield return new WaitForSeconds(0.4f);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti_blast2.SetActive(true);
+
+        yield return new WaitForSeconds(0.4f);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti_blast3.SetActive(true);
+
+
+
+    }
 
     public void OnLevelFailed()
     {

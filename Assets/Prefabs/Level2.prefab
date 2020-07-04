@@ -3806,16 +3806,6 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593366333873124, guid: 7d22a6461c88848e99ba853cf78f87ff,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6789593366333873124, guid: 7d22a6461c88848e99ba853cf78f87ff,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 6789593366377956186, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -3836,6 +3826,16 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 6789593366333873124, guid: 7d22a6461c88848e99ba853cf78f87ff,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789593366333873124, guid: 7d22a6461c88848e99ba853cf78f87ff,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6789593366562875429, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -3852,26 +3852,6 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6789593366694311012, guid: 7d22a6461c88848e99ba853cf78f87ff,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6789593366731592171, guid: 7d22a6461c88848e99ba853cf78f87ff,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6789593366731592171, guid: 7d22a6461c88848e99ba853cf78f87ff,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6789593366739322595, guid: 7d22a6461c88848e99ba853cf78f87ff,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6789593366739322595, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
@@ -3906,22 +3886,32 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367067461559, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593366731592171, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367067461559, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593366731592171, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367143604412, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593366739322595, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367143604412, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593366739322595, guid: 7d22a6461c88848e99ba853cf78f87ff,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789593367067461559, guid: 7d22a6461c88848e99ba853cf78f87ff,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789593367067461559, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
@@ -3946,22 +3936,12 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367306192052, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593367143604412, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367306192052, guid: 7d22a6461c88848e99ba853cf78f87ff,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6789593367352246808, guid: 7d22a6461c88848e99ba853cf78f87ff,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6789593367352246808, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593367143604412, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
@@ -3976,6 +3956,26 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 6789593367352246808, guid: 7d22a6461c88848e99ba853cf78f87ff,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789593367352246808, guid: 7d22a6461c88848e99ba853cf78f87ff,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789593367306192052, guid: 7d22a6461c88848e99ba853cf78f87ff,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789593367306192052, guid: 7d22a6461c88848e99ba853cf78f87ff,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6789593367443507438, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -3986,22 +3986,22 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367569277037, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593367641595665, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367569277037, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593367641595665, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367641595665, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593367569277037, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6789593367641595665, guid: 7d22a6461c88848e99ba853cf78f87ff,
+    - target: {fileID: 6789593367569277037, guid: 7d22a6461c88848e99ba853cf78f87ff,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
@@ -4045,17 +4045,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0d44c6863c13740f58ab0adb76c5163a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0d44c6863c13740f58ab0adb76c5163a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0d44c6863c13740f58ab0adb76c5163a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0d44c6863c13740f58ab0adb76c5163a,
         type: 3}
@@ -4119,18 +4119,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3405590073290859777, guid: 0d44c6863c13740f58ab0adb76c5163a,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000008146034
-      objectReference: {fileID: 0}
-    - target: {fileID: 3405590073290859777, guid: 0d44c6863c13740f58ab0adb76c5163a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.846176
-      objectReference: {fileID: 0}
-    - target: {fileID: 3405590073290859777, guid: 0d44c6863c13740f58ab0adb76c5163a,
-        type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.406393
+      value: -6.4063888
       objectReference: {fileID: 0}
     - target: {fileID: 3405590073290859777, guid: 0d44c6863c13740f58ab0adb76c5163a,
         type: 3}
@@ -4181,17 +4171,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 0d44c6863c13740f58ab0adb76c5163a,
-        type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed by
-        Humanoid clips.\n\tTransform 'mixamorig:RightHandRing3'\n\tTransform 'mixamorig:RightLeg'\n\tTransform
-        'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftHandIndex2'\n\tTransform
-        'mixamorig:LeftArm'\n\tTransform 'mixamorig:RightHandThumb2'\n\tTransform
-        'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftForeArm'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
-        'mixamorig:RightHandIndex3'\n\tand more ...\n\tFrom animation clip 'Idle'"
       objectReference: {fileID: 0}
     - target: {fileID: 7814502684447367421, guid: 0d44c6863c13740f58ab0adb76c5163a,
         type: 3}
@@ -5756,17 +5735,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0f04b29c9552e4f8a9437321797517d4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0f04b29c9552e4f8a9437321797517d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0f04b29c9552e4f8a9437321797517d4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0f04b29c9552e4f8a9437321797517d4,
         type: 3}
@@ -5825,18 +5804,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5662441008810156180, guid: 0f04b29c9552e4f8a9437321797517d4,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000008146034
-      objectReference: {fileID: 0}
-    - target: {fileID: 5662441008810156180, guid: 0f04b29c9552e4f8a9437321797517d4,
-        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9911797
+      value: 1.9911784
       objectReference: {fileID: 0}
     - target: {fileID: 5662441008810156180, guid: 0f04b29c9552e4f8a9437321797517d4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.044649
+      value: -6.044645
       objectReference: {fileID: 0}
     - target: {fileID: 5662441008810156180, guid: 0f04b29c9552e4f8a9437321797517d4,
         type: 3}
@@ -5887,17 +5861,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 0f04b29c9552e4f8a9437321797517d4,
-        type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed by
-        Humanoid clips.\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightFoot'\n\tTransform
-        'mixamorig:RightHandIndex3'\n\tTransform 'mixamorig:Neck'\n\tTransform 'mixamorig:LeftHandThumb2'\n\tTransform
-        'mixamorig:LeftHandRing2'\n\tTransform 'mixamorig:RightHandRing3'\n\tTransform
-        'mixamorig:Head'\n\tTransform 'mixamorig:LeftForeArm'\n\tTransform 'mixamorig:Hips'\n\tand
-        more ...\n\tFrom animation clip 'Idle'"
       objectReference: {fileID: 0}
     - target: {fileID: 7814502684447367421, guid: 0f04b29c9552e4f8a9437321797517d4,
         type: 3}
