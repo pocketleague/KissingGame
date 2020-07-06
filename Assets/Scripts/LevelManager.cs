@@ -197,10 +197,13 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator ConfettiDelay()
     {
+
+
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().mainModel.SetActive(false);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().walkAway.SetActive(true);
+
         yield return new WaitForSeconds(1.0f);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti.SetActive(true);
-
-
 
         yield return new WaitForSeconds(0.5f);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti_blast1.SetActive(true);
@@ -212,8 +215,6 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti_blast3.SetActive(true);
 
 
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().mainModel.SetActive(false);
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().walkAway.SetActive(true);
 
 
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().walkAway.GetComponent<Animator>().SetBool("walkAway", true);
