@@ -13,8 +13,9 @@ public class LevelManager : MonoBehaviour
     public bool LEVEL_COMPLETE;
 
     public List<GameObject> levels;
-    public GameObject fadeIn, bar, gameOverPanel;
+    public GameObject fadeIn, gameOverPanel;
     public Transform SwipePanel;
+    public Image fillingBar;
 
     public GameObject pf_swipePanelGirl, pf_swipePanelBoy;
 
@@ -50,6 +51,8 @@ public class LevelManager : MonoBehaviour
     {
         if (SingletonClass.instance.CURRENT_LEVEL)
             Destroy(SingletonClass.instance.CURRENT_LEVEL);
+
+        fillingBar.fillAmount = 0;
 
         fadeIn.SetActive(true);
         Invoke("DelayLoadLevel", .4f);
@@ -87,7 +90,7 @@ public class LevelManager : MonoBehaviour
         swipingPanel.SetActive(false);
 
         SingletonClass.instance.CURRENT_LEVEL = Instantiate(levels[SingletonClass.instance.LEVEL_NO-1]) as GameObject;
-        bar.SetActive(true);
+     //   bar.SetActive(true);
     }
 
     public void TouchDown()
@@ -106,9 +109,9 @@ public class LevelManager : MonoBehaviour
         {
             if (SingletonClass.instance.IS_KISSING)
             {
-                SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.fillAmount += .1f * Time.deltaTime;
+                fillingBar.fillAmount += .1f * Time.deltaTime;
 
-                if (SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.fillAmount >= 1)
+                if (fillingBar.fillAmount >= 1)
                 {
                     LEVEL_COMPLETE = true;
                     Debug.Log("Level complete");
@@ -204,6 +207,16 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti_blast3.SetActive(true);
 
 
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().mainModel.SetActive(false);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().walkAway.SetActive(true);
+
+
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().walkAway.GetComponent<Animator>().SetBool("walkAway", true);
+
+        ChangeCamera();
+        yield return new WaitForSeconds(1);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartMask.SetActive(true);
+
 
     }
 
@@ -215,22 +228,21 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.SetActive(true);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.SetActive(true);
 
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
-
-
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.SetActive(false);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.SetActive(false);
 
-        Invoke("HearAnimDelay", 2);
+        Invoke("DefeatDelay", 2.4f);
         
         gameOverPanel.SetActive(true);
     }
 
-    void HearAnimDelay()
+    void DefeatDelay()
     {
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.GetComponent<Animator>().SetBool("break", true);
-        Destroy(SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.gameObject, 2);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
+
+        //SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.GetComponent<Animator>().SetBool("break", true);
+        //Destroy(SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.gameObject, 2);
     }
 
     public void Right()
@@ -255,9 +267,7 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeCamera()
     {
-        if(camIndex == 3){
-            camIndex = 0;
-        }
+        
 
         if (camIndex == 0)
         {
@@ -271,10 +281,14 @@ public class LevelManager : MonoBehaviour
             SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.GetComponent<Animator>().SetBool("headTurn", false);
             SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.GetComponent<Animator>().SetBool("headTurn", false);
 
-            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.parent.gameObject.SetActive(true);
+            fillingBar.transform.parent.gameObject.SetActive(true);
         }
 
         camIndex++;
+        if (camIndex == 4)
+        {
+            camIndex = 0;
+        }
 
         for (int i = 0; i < 4; i++)
         {

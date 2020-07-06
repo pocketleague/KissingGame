@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public bool lookAtCouple, lookAway;
     public float originalAngle, lookAngle;
     public Animator animator;
-    public GameObject mainModel, duplicateModel;
+    public GameObject mainModel, duplicateModel, walkAway;
     void Start()
     {
         //  Invoke("LookAt", 4);

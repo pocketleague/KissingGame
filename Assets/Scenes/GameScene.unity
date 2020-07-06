@@ -268,7 +268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1234}
+  m_AnchoredPosition: {x: 0, y: 537}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157280995
@@ -629,7 +629,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bc8c1bda1711e406ca4d24eb05a7ec17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b235ac7db760041e4b112ab139f0d433, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -854,7 +854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &870837108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bc8c1bda1711e406ca4d24eb05a7ec17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b235ac7db760041e4b112ab139f0d433, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1100,7 +1100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.13043964, y: 0, z: 0, w: 0.9914563}
-  m_LocalPosition: {x: 0.1, y: -6.7, z: 31.4}
+  m_LocalPosition: {x: -4.5, y: -13.6, z: 57.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1415,9 +1415,9 @@ MonoBehaviour:
   - {fileID: 2057932322678494788, guid: 8677e4ef4ea9c4298a078cd3d9317773, type: 3}
   - {fileID: 7292634059065347944, guid: 681f898c860f743e799a8b6aa8fa72c8, type: 3}
   fadeIn: {fileID: 942461246}
-  bar: {fileID: 870837107}
   gameOverPanel: {fileID: 1026818916}
   SwipePanel: {fileID: 1289060545}
+  fillingBar: {fileID: 417791642}
   pf_swipePanelGirl: {fileID: 6295789988700810050, guid: f7928b05be5994d10950b41ae40c0c57,
     type: 3}
   pf_swipePanelBoy: {fileID: 6675910553894039651, guid: cdfb21e51f0f046d988b0000de1434d0,
@@ -2343,7 +2343,7 @@ PrefabInstance:
     - target: {fileID: 2057932322678494788, guid: 8677e4ef4ea9c4298a078cd3d9317773,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2057932322678494787, guid: 8677e4ef4ea9c4298a078cd3d9317773,
         type: 3}
@@ -2416,6 +2416,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 8360964744116818693, guid: 8677e4ef4ea9c4298a078cd3d9317773,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8754228539972029864, guid: 8677e4ef4ea9c4298a078cd3d9317773,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.20784314
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8677e4ef4ea9c4298a078cd3d9317773, type: 3}
 --- !u!1001 &7693947157298133652
