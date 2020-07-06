@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
     void LookAt()
     {
         animator.SetInteger("enemy", 1);
-        Invoke("LookAway", Random.Range(1, 4));
+        Invoke("LookAway", Random.Range(1, 2));
     }
 
     void LookAway()

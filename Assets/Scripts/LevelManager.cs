@@ -178,7 +178,7 @@ public class LevelManager : MonoBehaviour
     public void OnLevelComplete()
     {
         Debug.Log("gggg level complete");
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti.SetActive(true);
+     //   SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti.SetActive(true);
 
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.SetActive(true);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.SetActive(true);
@@ -197,7 +197,12 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator ConfettiDelay()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1.0f);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti.SetActive(true);
+
+
+
+        yield return new WaitForSeconds(0.5f);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti_blast1.SetActive(true);
 
         yield return new WaitForSeconds(0.4f);
