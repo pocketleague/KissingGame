@@ -3803,7 +3803,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 993702577329039672, guid: 3e29d8961c3ba4c52a7218634e822662, type: 3}
+  - {fileID: 2100000, guid: 8ae7e7a8fc2764db18130aa9c988f0f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11551,16 +11551,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoyIdle2
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: bb466f290315c49ba9cca3cae1266ab1,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 76969d807bc5e4050a6bb9bf517407b8, type: 2}
-    - target: {fileID: -6057140222963153312, guid: bb466f290315c49ba9cca3cae1266ab1,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bb466f290315c49ba9cca3cae1266ab1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11619,6 +11609,16 @@ PrefabInstance:
     - target: {fileID: 3405590073290859777, guid: bb466f290315c49ba9cca3cae1266ab1,
         type: 3}
       propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: bb466f290315c49ba9cca3cae1266ab1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 76969d807bc5e4050a6bb9bf517407b8, type: 2}
+    - target: {fileID: -6057140222963153312, guid: bb466f290315c49ba9cca3cae1266ab1,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5755990752737161608, guid: bb466f290315c49ba9cca3cae1266ab1,
@@ -15014,11 +15014,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Girl2
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 84830e76f789c421cae10b1845e39f7e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: cb9c34cf08a574980895da22a456ed33, type: 2}
     - target: {fileID: -4216859302048453862, guid: 84830e76f789c421cae10b1845e39f7e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15089,6 +15084,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 84830e76f789c421cae10b1845e39f7e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cb9c34cf08a574980895da22a456ed33, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84830e76f789c421cae10b1845e39f7e, type: 3}
 --- !u!4 &2676378206152058907 stripped
