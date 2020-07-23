@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 157280996}
   - component: {fileID: 157280995}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BtnNext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23082057, g: 0.8584906, b: 0.5907227, a: 0}
+  m_Color: {r: 0.23082057, g: 0.8584906, b: 0.5907227, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1100,7 +1100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.13043964, y: 0, z: 0, w: 0.9914563}
-  m_LocalPosition: {x: -4.5, y: -13.6, z: 57.1}
+  m_LocalPosition: {x: 0.1, y: -6.7, z: 31.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1161,7 +1161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1026818917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1412,6 +1412,8 @@ MonoBehaviour:
   startedKiss: 0
   LEVEL_COMPLETE: 0
   levels:
+  - {fileID: 2057932322678494788, guid: 8677e4ef4ea9c4298a078cd3d9317773, type: 3}
+  - {fileID: 7292634059065347944, guid: 681f898c860f743e799a8b6aa8fa72c8, type: 3}
   - {fileID: 2057932322678494788, guid: 8677e4ef4ea9c4298a078cd3d9317773, type: 3}
   - {fileID: 7292634059065347944, guid: 681f898c860f743e799a8b6aa8fa72c8, type: 3}
   fadeIn: {fileID: 942461246}
@@ -1726,7 +1728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1474933194
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2505,6 +2507,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 1357425171654172941, guid: 681f898c860f743e799a8b6aa8fa72c8,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 8644730965310154283, guid: 681f898c860f743e799a8b6aa8fa72c8,
         type: 3}
       propertyPath: m_Camera
       value: 

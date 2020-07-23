@@ -197,10 +197,17 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator ConfettiDelay()
     {
+        if (SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().levelType == 1)
+        {
 
+            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().mainModel.SetActive(false);
+            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().walkAway.SetActive(true);
+        }
+        else
+        {
+            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().mainModel.GetComponent<Animator>().SetBool("WalkAway", true);
+        }
 
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().mainModel.SetActive(false);
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().walkAway.SetActive(true);
 
         yield return new WaitForSeconds(1.0f);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti.SetActive(true);
@@ -213,8 +220,6 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().confetti_blast3.SetActive(true);
-
-
 
 
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().enemy.GetComponent<Enemy>().walkAway.GetComponent<Animator>().SetBool("walkAway", true);
@@ -273,12 +278,13 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeCamera()
     {
-        
+
 
         if (camIndex == 0)
         {
             SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.GetComponent<Animator>().SetBool("headTurn", true);
-        }else if (camIndex == 1)
+        }
+        else if (camIndex == 1)
         {
             SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.GetComponent<Animator>().SetBool("headTurn", true);
         }
@@ -291,16 +297,18 @@ public class LevelManager : MonoBehaviour
         }
 
         camIndex++;
-        if (camIndex == 4)
+        if (camIndex == 2)
         {
             camIndex = 0;
         }
 
-        for (int i = 0; i < 4; i++)
-        {
-            SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[i].SetActive(false);
-        }
-        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[camIndex].SetActive(true);
+        //for (int i = 0; i < 2; i++)
+        //{
+        //    SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[i].SetActive(false);
+        //}
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[0].SetActive(true);
+        SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().cameras[1].SetActive(false);
+
 
     }
 }
