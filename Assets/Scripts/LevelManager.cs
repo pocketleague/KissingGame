@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     public bool LEVEL_COMPLETE;
 
     public List<GameObject> levels;
-    public GameObject fadeIn, gameOverPanel;
+    public GameObject fadeIn, gameOverPanel, btn_next, btn_replay;
     public Transform SwipePanel;
     public Image fillingBar;
 
@@ -52,12 +52,14 @@ public class LevelManager : MonoBehaviour
     {
         if (SingletonClass.instance.CURRENT_LEVEL)
             Destroy(SingletonClass.instance.CURRENT_LEVEL);
-        
+
+
         Resources.UnloadUnusedAssets();
 
         fillingBar.fillAmount = 0;
 
         fadeIn.SetActive(true);
+
         Invoke("DelayLoadLevel", .4f);
     }
 
@@ -76,7 +78,7 @@ public class LevelManager : MonoBehaviour
         LEVEL_COMPLETE = false;
         gameOverPanel.SetActive(false);
 
-        if (SingletonClass.instance.LEVEL_NO == 0)
+        if (SingletonClass.instance.LEVEL_NO == -1)
         {
             swipingPanel = Instantiate(pf_swipePanelGirl, SwipePanel) as GameObject;
             cardHolder = swipingPanel.transform.Find("CardHolder");
@@ -92,16 +94,15 @@ public class LevelManager : MonoBehaviour
 
     public void CloseSwipePanel()
     {
-        SingletonClass.instance.LEVEL_NO++;
-
-        txt_level.text = "Level "+SingletonClass.instance.LEVEL_NO;
+       
+        txt_level.text = "Level "+SingletonClass.instance.TOTAL_LEVELS_PLAYED;
         fadeIn.SetActive(true);
         Invoke("DelayCloseSwipePanel", .4f);
     }
 
     void DelayCloseSwipePanel()
     {
-        if (SingletonClass.instance.LEVEL_NO == 1)
+        if (SingletonClass.instance.LEVEL_NO == 0)
         {
             swipingPanel.SetActive(false);
         }
@@ -207,7 +208,6 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boy.SetActive(false);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.SetActive(false);
 
-        gameOverPanel.SetActive(true);
 
         StartCoroutine(ConfettiDelay());
     }
@@ -244,13 +244,29 @@ public class LevelManager : MonoBehaviour
         ChangeCamera();
         yield return new WaitForSeconds(1);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartMask.SetActive(true);
+        gameOverPanel.SetActive(true);
+        btn_next.SetActive(true);
+        btn_replay.SetActive(false);
+
+        // Update level no
+        if (SingletonClass.instance.LEVEL_NO >= levels.Count)
+        {
+            SingletonClass.instance.LEVEL_NO = 1;
+        }
+        else
+        {
+            SingletonClass.instance.LEVEL_NO++;
+        }
+
+        PlayerPrefs.SetInt("level_no", SingletonClass.instance.LEVEL_NO);
+        SingletonClass.instance.TOTAL_LEVELS_PLAYED++;
+        PlayerPrefs.SetInt("total_levels_played", SingletonClass.instance.TOTAL_LEVELS_PLAYED);
 
 
     }
 
     public void OnLevelFailed()
     {
-
         LEVEL_COMPLETE = false;
 
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.SetActive(true);
@@ -261,7 +277,7 @@ public class LevelManager : MonoBehaviour
 
         Invoke("DefeatDelay", 2.4f);
         
-        gameOverPanel.SetActive(true);
+       
     }
 
     void DefeatDelay()
@@ -269,6 +285,9 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().boyHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girlHappy.GetComponentInChildren<Animator>().SetBool("angry", true);
 
+        gameOverPanel.SetActive(true);
+        btn_next.SetActive(false);
+        btn_replay.SetActive(true);
         //SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.GetComponent<Animator>().SetBool("break", true);
         //Destroy(SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().heartFiller.transform.parent.gameObject, 2);
     }
