@@ -1100,7 +1100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.13043964, y: 0, z: 0, w: 0.9914563}
-  m_LocalPosition: {x: 0.1, y: -22.6, z: 31.4}
+  m_LocalPosition: {x: 0.1, y: -6.7, z: 31.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1414,8 +1414,14 @@ MonoBehaviour:
   levels:
   - {fileID: 2057932322678494788, guid: 8677e4ef4ea9c4298a078cd3d9317773, type: 3}
   - {fileID: 7292634059065347944, guid: 681f898c860f743e799a8b6aa8fa72c8, type: 3}
+  - {fileID: 2057932322678494788, guid: ce811f967531e4587bd133c5eb99cf9d, type: 3}
+  - {fileID: 2057932322678494788, guid: e945e8a01b88c46289d34948bb94661d, type: 3}
+  - {fileID: 2057932322678494788, guid: 0af58b0ee66614023b35591a7075339c, type: 3}
+  - {fileID: 2057932322678494788, guid: b2e59381c0c17462fa8304548b6db45c, type: 3}
+  - {fileID: 2057932322678494788, guid: 7023ed64fa5f3422db2c5c7288f9d350, type: 3}
   - {fileID: 2057932322678494788, guid: 8677e4ef4ea9c4298a078cd3d9317773, type: 3}
   - {fileID: 7292634059065347944, guid: 681f898c860f743e799a8b6aa8fa72c8, type: 3}
+  - {fileID: 2057932322678494788, guid: ce811f967531e4587bd133c5eb99cf9d, type: 3}
   fadeIn: {fileID: 942461246}
   gameOverPanel: {fileID: 1026818916}
   SwipePanel: {fileID: 1289060545}
