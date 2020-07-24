@@ -2563,6 +2563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConfettiExplosionMagic (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1702015823946804, guid: da4957823d91d8a4c878dec336e7dfe1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4020892416780018, guid: da4957823d91d8a4c878dec336e7dfe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.299999
@@ -2834,6 +2838,10 @@ PrefabInstance:
     - target: {fileID: 1323810789808520, guid: cfd858b69e847b4468421c2fd8411837, type: 3}
       propertyPath: m_Name
       value: ConfettiExplosionRainbow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323810789808520, guid: cfd858b69e847b4468421c2fd8411837, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4181464141480868, guid: cfd858b69e847b4468421c2fd8411837, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10665,6 +10673,10 @@ PrefabInstance:
     - target: {fileID: 1051027301378462, guid: efe5e46a88f1c73478f88dadde84347b, type: 3}
       propertyPath: m_Name
       value: ConfettiExplosionRomantic (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051027301378462, guid: efe5e46a88f1c73478f88dadde84347b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4573988895009100, guid: efe5e46a88f1c73478f88dadde84347b, type: 3}
       propertyPath: m_LocalPosition.x

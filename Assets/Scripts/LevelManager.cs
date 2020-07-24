@@ -23,6 +23,7 @@ public class LevelManager : MonoBehaviour
     private GameObject swipingPanel, matchPanel;
 
     public int camIndex;
+    public Text txt_level;
 
      private void Awake()
     {
@@ -51,6 +52,8 @@ public class LevelManager : MonoBehaviour
     {
         if (SingletonClass.instance.CURRENT_LEVEL)
             Destroy(SingletonClass.instance.CURRENT_LEVEL);
+        
+        Resources.UnloadUnusedAssets();
 
         fillingBar.fillAmount = 0;
 
@@ -73,21 +76,35 @@ public class LevelManager : MonoBehaviour
         LEVEL_COMPLETE = false;
         gameOverPanel.SetActive(false);
 
-        swipingPanel = Instantiate(pf_swipePanelGirl, SwipePanel) as GameObject;
-        cardHolder = swipingPanel.transform.Find("CardHolder");
-        matchPanel = swipingPanel.transform.Find("MatchPanel").gameObject;
+        if (SingletonClass.instance.LEVEL_NO == 0)
+        {
+            swipingPanel = Instantiate(pf_swipePanelGirl, SwipePanel) as GameObject;
+            cardHolder = swipingPanel.transform.Find("CardHolder");
+            matchPanel = swipingPanel.transform.Find("MatchPanel").gameObject;
+        }
+        else
+        {
+            CloseSwipePanel();
+
+        }
+
     }
 
     public void CloseSwipePanel()
     {
         SingletonClass.instance.LEVEL_NO++;
+
+        txt_level.text = "Level "+SingletonClass.instance.LEVEL_NO;
         fadeIn.SetActive(true);
         Invoke("DelayCloseSwipePanel", .4f);
     }
 
     void DelayCloseSwipePanel()
     {
-        swipingPanel.SetActive(false);
+        if (SingletonClass.instance.LEVEL_NO == 1)
+        {
+            swipingPanel.SetActive(false);
+        }
 
         SingletonClass.instance.CURRENT_LEVEL = Instantiate(levels[SingletonClass.instance.LEVEL_NO-1]) as GameObject;
      //   bar.SetActive(true);
