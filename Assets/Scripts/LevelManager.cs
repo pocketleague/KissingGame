@@ -209,6 +209,7 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.CURRENT_LEVEL.GetComponent<LevelData>().girl.SetActive(false);
 
 
+
         StartCoroutine(ConfettiDelay());
     }
 
@@ -262,6 +263,8 @@ public class LevelManager : MonoBehaviour
         SingletonClass.instance.TOTAL_LEVELS_PLAYED++;
         PlayerPrefs.SetInt("total_levels_played", SingletonClass.instance.TOTAL_LEVELS_PLAYED);
 
+        string eventName = "af_fakeImpression";
+        Dictionary<string, string> eventParams = new Dictionary<string, string>() { { "imp", "1" } }; AppsFlyer.trackRichEvent(eventName, eventParams);
 
     }
 
