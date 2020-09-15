@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657832, g: 0.49641317, b: 0.5748146, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657832, g: 0.49641353, b: 0.57481486, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2009,6 +2009,80 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &1926296533
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5488337757246902640, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_Name
+      value: CLAppsFlyer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350733351414723343, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351268043575557716, guid: cbbfedfdfb3ff45c7a2f3468e137fd08,
+        type: 3}
+      propertyPath: devKey
+      value: 8MAzUC3B2BHYVi2uYVHaSd
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbbfedfdfb3ff45c7a2f3468e137fd08, type: 3}
 --- !u!224 &2107501857 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6675910553894039650, guid: cdfb21e51f0f046d988b0000de1434d0,
